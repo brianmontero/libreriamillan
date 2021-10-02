@@ -1,0 +1,54 @@
+.container-fluid {
+    background-color: #570303;
+}
+
+.logosRS {
+    margin: 2rem 0 1rem 1rem;
+}
+
+.logosRS i {
+    color: #FFF;
+    margin-right: 2rem;
+    transition: 0.2s;
+}
+
+.logosRS i:hover {
+    color: #FFB011;
+}
+
+.info {
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+.info p:first-of-type {
+    font-family: 'Noto Sans';
+    font-size: 33px;
+}
+
+.info p {
+    font-family: 'Noto Sans';
+    font-size: 18px;
+    margin-top: 1.5rem;
+    color: #FFF;
+}
+
+span p {
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+span p:first-of-type {
+    margin-bottom: -2px;
+}
+
+span p a {
+    color: darkgray;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+span p a:hover {
+    color: #FFF;
+}

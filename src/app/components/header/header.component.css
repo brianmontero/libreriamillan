@@ -1,0 +1,27 @@
+nav {
+    background-color: #570303;
+}
+
+.container-fluid {
+    margin: 0 2rem 0 2rem;
+}
+
+ul li a {
+    margin-left: 4rem;
+    font-family: 'Noto Sans';
+    font-size: 22px;
+    text-decoration: none;
+    color: #FFF;
+    transition: 0.2s;
+}
+
+ul li a:hover {
+    color: #FFB011;
+}
+
+.librosCantidad {
+    color: black;
+    position: relative;
+    top: 7px;
+    right: 15px;
+}

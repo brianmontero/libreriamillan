@@ -1,0 +1,46 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <form class="mx-auto" #formulario>
+                    <div>
+                        <label>Buscar por autor</label>
+                        <input type="text" class="form-control" placeholder="Ingrese un autor" #autor>
+                    </div>
+
+                    <div class="botones">
+                        <button type="button" class="buscar" (click)="searchRequest(autor.value)">Buscar</button>
+                        <button type="button" class="limpiar" (click)="limpiar(formulario)">Limpiar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col" *ngFor="let libro of libros">
+                        <div class="card border" id="tarjeta">
+                            <div class="thumbnail">
+                                <img src="{{libro.volumeInfo.imageLinks.thumbnail}}" alt="..." width="190" height="246">
+                            </div>
+                            <div class="card-body">
+                                <div class="card-title">
+                                    <h4>{{libro.volumeInfo.title}}</h4>
+                                </div>
+                                <div>
+                                    <p>{{libro.volumeInfo.authors}}</p>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <div class="precioAdd">
+                                    <p><strong>Precio: {{libro.volumeInfo.pageCount | currency }}</strong></p>
+                                    <i class="fas fa-plus fa-lg" id="plus" (click)="pasarValor(libro)"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

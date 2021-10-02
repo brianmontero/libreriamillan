@@ -1,0 +1,73 @@
+<div class="container">
+    <form [formGroup]="miFormulario">
+        <div>
+            <label>Nombre:</label>
+            <input type="text" placeholder="Nombre" class="form-control" formControlName="nombre">
+            <br>
+            <div class="alert alert-danger" *ngIf="miFormulario.get('nombre').hasError('required') && miFormulario.get('nombre').touched">
+                Nombre es necesario.
+            </div>
+        </div>
+        <div>
+            <label>Apellido:</label>
+            <input type="text" placeholder="Apellido" class="form-control" formControlName="apellido">
+            <br>
+            <div class="alert alert-danger" *ngIf="miFormulario.get('apellido').hasError('required') && miFormulario.get('apellido').touched">
+                Apellido es necesario.
+            </div>
+        </div>
+        <div>
+            <label>Email:</label>
+            <input type="email" placeholder="Email" class="form-control" formControlName="email">
+            <br>
+            <div class="alert alert-danger" *ngIf="miFormulario.get('email').hasError('required') && miFormulario.get('email').hasError('email') && miFormulario.get('email').touched">
+                Email es necesario.
+            </div>
+        </div>
+        <div>
+            <label>Teléfono:</label>
+            <input type="number" placeholder="Teléfono" class="form-control" formControlName="telefono">
+            <br>
+            <div class="alert alert-danger" *ngIf="miFormulario.get('telefono').hasError('required') && miFormulario.get('telefono').touched">
+                Teléfono es necesario.
+            </div>
+        </div>
+        <div>
+            <label>Departamento: </label> &nbsp;
+            <select name="departamentos">
+                <option value="Artigas">Artigas</option>
+                <option value="Canelones">Canelones</option>
+                <option value="Cerro Largo">Cerro Largo</option>
+                <option value="Colonia">Colonia</option>
+                <option value="Durazno">Durazno</option>
+                <option value="Flores">Flores</option>
+                <option value="Florida">Florida</option>
+                <option value="Lavalleja">Lavalleja</option>
+                <option value="Maldonado">Maldonado</option>
+                <option value="Montevideo">Montevideo</option>
+                <option value="Paysandú">Paysandú</option>
+                <option value="Río Negro">Río Negro</option>
+                <option value="Rivera">Rivera</option>
+                <option value="Rocha">Rocha</option>
+                <option value="Salto">Salto</option>
+                <option value="San José">San José</option>
+                <option value="Soriano">Soriano</option>
+                <option value="Tacuarembó">Tacuarembó</option>
+                <option value="TreintaYTres">Treinta y Tres</option>
+            </select>
+        </div>
+
+        <div>
+            <label>Mensaje</label>
+            <textarea type="textarea" placeholder="Mensaje..." class="form-control" id="textarea" formControlName="mensaje"></textarea>
+            <br>
+            <div class="alert alert-danger" *ngIf="miFormulario.get('mensaje').hasError('required') && miFormulario.get('mensaje').touched">
+                Nombre es necesario.
+            </div>
+        </div>
+
+        <div>
+            <button [disabled]="miFormulario.invalid" type="submit" (click)="formularioEnviado()">Enviar</button>
+        </div>
+    </form>
+</div>

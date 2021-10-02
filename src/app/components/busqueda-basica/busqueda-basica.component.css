@@ -1,0 +1,41 @@
+.card {
+    width: 12rem;
+    font-family: 'Noto Sans';
+}
+
+.row {
+    margin-bottom: 2rem;
+}
+
+.precioAdd {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.autores {
+    font-size: 14px;
+}
+
+#plus {
+    color: green;
+    position: relative;
+    top: 7px;
+    transition: 0.3s;
+}
+
+#plus:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.busquedaValor {
+    font-family: 'Noto Sans';
+}
+
+.row:first-of-type {
+    margin: 1rem 0 1rem 0;
+}

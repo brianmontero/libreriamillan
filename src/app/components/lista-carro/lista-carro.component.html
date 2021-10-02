@@ -1,0 +1,39 @@
+<div class="container">
+    <h2 class="text-center mt-3" style="font-family: 'Noto Sans';">Carrito de compras</h2>
+    <div class="card mx-auto border">
+        <div class="card-body" *ngIf="librosEnCarro.length > 0">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="indexHead">#</th>
+                        <th scope="col" class="imagenHead">Imágen</th>
+                        <th scope="col" class="tituloAutorHead">Título y Autor(es)</th>
+                        <th scope="col" class="precioHead">Precio</th>
+                        <th scope="col" class="basuraHead">Eliminar</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let libro of librosEnCarro, let i = index">
+                        <th scope="row">{{i+1}}</th>
+                        <td><img src="{{libro.volumeInfo.imageLinks.smallThumbnail}}" alt="..."></td>
+                        <td>{{libro.volumeInfo.title}} - {{libro.volumeInfo.authors}}</td>
+                        <td>{{libro.volumeInfo.pageCount | currency}}</td>
+                        <td class="basura"><button (click)="eliminarLibro(libro)"><i class="fas fa-trash"></i></button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="card-footer">
+                <div class="d-flex justify-content-end">
+                    <button class="limpiarCarro" (click)="limpiarCarro()">Limpiar carro</button>
+                    <button class="comprar" (click)="ejecutarCompra()">Comprar</button>
+                    <p class="totalPrecio">Total: {{precioTotal | currency}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="emptyCart mx-auto" *ngIf="librosEnCarro.length == 0">
+            <p class="text-center">El carro está vacio</p>
+            <i class="fas fa-store-slash fa-5x"></i>
+        </div>
+    </div>
+</div>

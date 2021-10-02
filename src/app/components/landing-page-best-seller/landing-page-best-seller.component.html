@@ -1,0 +1,19 @@
+<div class="container mt-3 mx-auto">
+    <hr>
+    <h3 class="text-center" style="font-family: 'Noto Sans'; font-weight: 500;" id="BestSellers">Más Vendidos</h3>
+    <div class="tarjetas">
+        <div class="card" *ngFor="let libro of librosBestSellers">
+            <input type="text" hidden value="{{libro.id}}">
+            <img src="{{libro.volumeInfo.imageLinks.thumbnail}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <div class="card-title">{{libro.volumeInfo.title}}</div>
+                <div class="card-text">{{libro.volumeInfo.authors || 'Juan Pérez' }}</div>
+                <div class="precioPlus d-flex justify-content-between">
+                    <p><strong>Precio: {{libro.volumeInfo.pageCount || 100 | currency}}</strong></p>
+                    <a (click)="pasarValor(libro)"><i class="fas fa-plus fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

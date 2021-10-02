@@ -1,0 +1,34 @@
+<nav class="navbar">
+    <div class="container-fluid">
+      <div class="variedades">
+          <ul class="nav navbar">
+            <li>
+                <a href="#" (click)="getNovedades()">Novedades</a>
+            </li>
+
+            <li>
+                <a href="#" (click)="getBestSellers()">Más Vendidos</a>
+            </li>
+
+            <li>
+                <a href="#" (click)="getNovelas()">Novelas</a>
+            </li>
+
+            <li>
+                <a href="#" (click)="getEducativos()">Educativos</a>
+            </li>
+          </ul>
+      </div>
+
+      <div class="busqueda d-flex">
+        <i class="fas fa-search" id="lupa"></i>
+        <form class="d-flex" action="#">
+          <input type="search" placeholder="Búsqueda" class="form-control" #busquedaValue>
+          <button type="submit" (click)="submit(busquedaValue.value)">Buscar</button>
+        </form>
+        <button class="busquedaAvanzada" data-bs-toggle="tooltip" title="Buscar por autor" routerLink="/busqueda-avanzada">
+            <i class="fas fa-search-plus"></i>
+        </button>
+      </div>
+    </div>
+  </nav>

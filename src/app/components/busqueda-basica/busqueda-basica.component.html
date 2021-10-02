@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <h2 class="busquedaValor">Búsqueda: {{busqueda}}</h2>
+        <hr>
+    </div>
+    <div class="row">
+        <div class="col" *ngFor="let libro of libros">
+            <div class="card">
+                <div class="thumbnail">
+                    <img src="{{libro.volumeInfo.imageLinks.thumbnail}}" alt="..." width="190" height="246">
+                </div>
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>{{libro.volumeInfo.title}}</h4>
+                    </div>
+                    <div>
+                        <p class="autores">{{libro.volumeInfo.authors}}</p>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <div class="precioAdd">
+                        <p><strong>Precio: {{libro.volumeInfo.pageCount | currency}}</strong></p>
+                        <i class="fas fa-plus fa-lg" id="plus" (click)="pasarValor(libro)"></i>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>

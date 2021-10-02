@@ -1,0 +1,33 @@
+<nav class="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="../../../assets/logos/logoLibreria.png" alt="" width="300" height="80" class="d-inline-block align-text-top">
+      </a>
+
+      <ul class="nav navbar">
+          <li>
+              <a routerLink="">Inicio</a>
+          </li>
+
+          <li>
+              <a routerLink="/about">Sobre Nosotros</a>
+          </li>
+
+          <li>
+              <a routerLink="/carro">Carrito</a>
+          </li>
+
+          <li>
+              <a routerLink="/contacto">Contacto</a>
+          </li>
+
+          <li>
+              <a>
+                <i class="fas fa-shopping-cart" id="carro"></i>
+                <i class="fas fa-certificate"></i>
+              </a>
+            </li>
+            <p class="librosCantidad">{{librosContador}}</p>
+      </ul>
+    </div>
+</nav>

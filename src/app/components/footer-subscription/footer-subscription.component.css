@@ -1,0 +1,35 @@
+.informacionSuscripcion {
+    margin-top: 1.5rem;
+}
+
+.informacionSuscripcion p {
+    color: #FFF;
+    font-family: 'Noto Sans';
+    font-size: 27px;
+}
+
+form input {
+    border-radius: 2px;
+    border: none;
+    box-shadow: none;
+    width: 400px;
+    height: 40px;
+    margin-right: 1rem;
+    font-family: 'Noto Sans';
+}
+
+form button {
+    border: none;
+    background-color: #FFF;
+    width: 120px;
+    transition: 0.2s;
+    font-size: 17px;
+}
+
+form button:hover {
+    background-color: #FFB011;
+}
+
+.logo {
+    margin-top: 3rem;
+}

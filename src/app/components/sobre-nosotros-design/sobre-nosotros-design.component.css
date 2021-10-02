@@ -1,0 +1,109 @@
+#filaUno {
+    margin-top: 2rem;
+}
+
+#primerParrafo {
+    font-family: 'Noto Sans';
+    font-size: 29px;
+    margin-top: 2rem;
+    width: 75%;
+    text-align: center;
+}
+
+#segundoParrafo {
+    font-family: 'Noto Sans';
+    font-size: 29px;
+    text-align: center;
+    width: 75%;
+    position: relative;
+    top: 60px;
+    right: -45px;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    width: 75%;
+}
+
+.card-footer {
+    background-color: #570303;
+}
+
+.card-footer p {
+    height: 1rem;
+    font-family: 'Noto Sans';
+    font-size: 20px;
+    font-style: italic;
+    color: #FFF;
+    position: relative;
+    right: -10px;
+}
+
+#misionVision {
+    width: 100%;
+    margin: 2rem 0 2rem 0;
+    background-color: #570303;
+    display: flex;
+    justify-content: center;
+}
+
+#misionVision h4 {
+    font-family: 'Noto Sans';
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+.mision {
+    width: 75%;
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.mision p {
+    font-family: 'Noto Sans';
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.vision {
+    width: 75%;
+    margin: 1.5rem 0 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.vision p {
+    font-family: 'Noto Sans';
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.directorios {
+    margin: 1rem 0 0 2rem;
+    position: relative;
+    top: 10px;
+}
+
+.ubicacion i {
+    color: #3369FF;
+    margin-bottom: .5rem;
+}
+
+.ubicacion h2 {
+    font-family: 'Noto Sans';
+    margin-bottom: 1rem;
+}
+
+.mapa {
+    margin-bottom: 2rem;
+}
+
+span a {
+    text-decoration: none;
+    font-family: 'Noto Sans';
+    font-size: 15px;
+}
