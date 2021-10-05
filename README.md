@@ -1,1 +1,1 @@
-CRUD de libraría utilizando Google Books API.
+CRUD de librería inexistente utilizando Google Books API.
